@@ -1,0 +1,4 @@
+baseURL: https://blog.emersonmx.dev/
+languageCode: en-us
+title: Emerson MX
+theme: hugo-starter
