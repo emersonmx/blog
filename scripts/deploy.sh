@@ -7,7 +7,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 printf "Deploying updates to GitHub...\n"
 
 # Build the project.
-hugo
+hugo -e production
 
 # Go To Public folder
 cd $script_dir/../public
