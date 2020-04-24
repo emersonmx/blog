@@ -16,7 +16,7 @@ rm -f ../public/index.*
 rm -f ../public/sitemap.xml
 
 # Build the project.
-hugo -e production
+hugo -e production --minify
 
 # Go To Public folder
 cd $public_dir
