@@ -1,0 +1,17 @@
+name = "mxblog"
+license = "MIT"
+licenselink = "https://github.com/emersonmx/mxblog-theme/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/emersonmx/mxblog-theme"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Emerson Max de Medeiros Silva"
+  homepage = "https://blog.emersonmx.dev"
+
+[original]
+  name = "Starter Theme"
+  homepage = "https://jimfrenette.com/2019/02/hugo-static-site-generator-blank-starter-theme/"
+  repo = "https://github.com/jimfrenette/hugo-starter"
