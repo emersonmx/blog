@@ -2,7 +2,3 @@
 	path = public
 	url = git@github.com:emersonmx/emersonmx.github.io.git
 	branch = master
-[submodule "themes/mxblog"]
-	path = themes/mxblog
-	url = git@github.com:emersonmx/mxblog-theme.git
-	branch = master
