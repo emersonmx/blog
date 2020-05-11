@@ -1,0 +1,12 @@
+name = "Simple"
+license = "MIT"
+licenselink = "https://github.com/emersonmx/blog/blob/master/themes/simple/LICENSE"
+description = ""
+homepage = "https://github.com/emersonmx/blog"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Emerson Max de Medeiros Silva"
+  homepage = "https://blog.emersonmx.dev"

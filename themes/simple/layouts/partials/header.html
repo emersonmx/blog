@@ -1,0 +1,8 @@
+<header>
+    <div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Site.Params.subtitle }}
+            <p>{{ . }}</p>
+        {{ end }}
+    </div>
+</header>

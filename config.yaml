@@ -1,6 +1,6 @@
 baseURL: https://blog.emersonmx.dev/
 languageCode: en-us
 title: Emerson MX
-theme: mxblog
+theme: simple
 params:
-  description: Developer Diary
+  subtitle: Developer Diary
