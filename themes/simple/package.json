@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "dependencies": {
+        "tailwindcss": "^1.4.6"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^2.2.0",
+        "postcss": "^7.0.30",
+        "postcss-cli": "^7.1.1",
+        "postcss-import": "^12.0.1",
+        "postcss-preset-env": "^6.7.0"
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "Firefox ESR",
+        "not dead"
+    ]
+}
