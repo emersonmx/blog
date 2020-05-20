@@ -17,7 +17,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 module.exports = {
     plugins: [
-        require('postcss-import')({ path: [themeDir] }),
+        require('postcss-import')({ path: [themeDir + 'node_modules'] }),
         require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
         postcssPresetEnv({
             stage: 3,
