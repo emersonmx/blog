@@ -5,7 +5,7 @@
     <body class="flex flex-col h-screen font-mono text-gray-900">
         {{- partial "header.html" . -}}
 
-        <main id="content" class="mx-5 mb-auto">
+        <main id="content" class="self-center w-full px-5 mb-auto max-w-screen-sm">
             {{- block "main" . }}{{- end }}
         </main>
 
