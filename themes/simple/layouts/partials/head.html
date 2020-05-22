@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    {{ $css := resources.Get "css/main.css" | resources.PostCSS (dict "config" "./assets/css/postcss.config.js") }}
+    {{ $css := resources.Get "css/main.css" | resources.PostCSS (dict "config" "./postcss.config.js") }}
     {{ with $css }}
         {{ $secureCss := . | resources.Fingerprint }}
         {{ if hugo.IsProduction }}

@@ -1,8 +1,9 @@
-const themeDir = __dirname + '/../../';
+const path = require('path');
+const themeDir = path.resolve(__dirname);
 const postcssPresetEnv = require('postcss-preset-env');
 const purgecss = require('@fullhuman/postcss-purgecss')({
     content: [
-        themeDir + 'layouts/**/*.html',
+        path.resolve(themeDir, 'layouts/**/*.html'),
         'layouts/**/*.html',
         'content/**/*.html',
     ],
@@ -17,8 +18,10 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 module.exports = {
     plugins: [
-        require('postcss-import')({ path: [themeDir + 'node_modules'] }),
-        require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
+        require('postcss-import')({
+            path: [path.resolve(themeDir, 'node_modules')],
+        }),
+        require('tailwindcss')(path.resolve(themeDir, 'tailwind.config.js')),
         postcssPresetEnv({
             stage: 3,
             features: {
