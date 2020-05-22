@@ -11,6 +11,6 @@
             {{ $secureCss = $secureCss | resources.Minify | resources.PostProcess }}
         {{ end }}
 
-        <link rel="stylesheet" href="{{ $secureCss.Permalink | relURL  }}">
+        <link rel="stylesheet" href="{{ $secureCss.Permalink }}">
     {{ end }}
 </head>
