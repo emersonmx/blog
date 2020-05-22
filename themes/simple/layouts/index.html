@@ -1,9 +1,15 @@
 {{ define "main" }}
     {{ range .Site.RegularPages }}
-        <article>
-            <h2>{{ .Title }}</h2>
+        <article class="mb-4">
+            <h2 class="text-2xl">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
 
-            {{ .Content }}
+            {{ with .PublishDate }}
+                <time datetime="{{ .Format "2006-01-02T15:04:05Z0700" }}" class="text-xs text-gray-700">
+                    {{ .Format "2006-01-02 15:04:05" }}
+                </time>
+            {{ end }}
         </article>
     {{ end }}
 {{ end }}

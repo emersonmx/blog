@@ -2,10 +2,10 @@
 <html lang="en">
     {{- partial "head.html" . -}}
 
-    <body>
+    <body class="flex flex-col h-screen font-mono text-gray-900">
         {{- partial "header.html" . -}}
 
-        <main id="content">
+        <main id="content" class="mx-5 mb-auto">
             {{- block "main" . }}{{- end }}
         </main>
 
