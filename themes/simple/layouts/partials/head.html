@@ -13,4 +13,8 @@
 
         <link rel="stylesheet" href="{{ $secureCss.Permalink }}">
     {{ end }}
+
+	{{ if hugo.IsProduction }}
+        {{- partial "gtm/head.html" . -}}
+	{{ end }}
 </head>

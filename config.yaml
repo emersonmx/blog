@@ -3,4 +3,5 @@ languageCode: en-us
 title: Emerson MX
 theme: simple
 params:
+  gtm: GTM-K2F66G4
   subtitle: Developer Diary

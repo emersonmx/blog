@@ -3,6 +3,10 @@
     {{- partial "head.html" . -}}
 
     <body class="flex flex-col h-screen font-mono text-gray-900">
+        {{ if hugo.IsProduction }}
+            {{- partial "gtm/body.html" . -}}
+        {{ end }}
+
         {{- partial "header.html" . -}}
 
         <main id="content" class="self-center w-full px-5 mb-auto max-w-screen-sm">
