@@ -2,11 +2,11 @@
     <div class="text-center">
         {{ if .IsHome }}
             <h1 class="text-4xl font-bold leading-none">
-                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
             </h1>
         {{ else }}
             <p class="text-4xl font-bold leading-none">
-                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
             </p>
         {{ end }}
         {{ with .Site.Params.subtitle }}

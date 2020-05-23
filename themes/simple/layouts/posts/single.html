@@ -1,7 +1,7 @@
 {{ define "main" }}
     <article class="mb-4">
         <h1 class="text-2xl">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h1>
 
         {{ with .PublishDate }}

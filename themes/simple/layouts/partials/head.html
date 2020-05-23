@@ -11,8 +11,10 @@
             {{ $secureCss = $secureCss | resources.Minify | resources.PostProcess }}
         {{ end }}
 
-        <link rel="stylesheet" type="text/css" href="{{ $secureCss.Permalink }}">
+        <link rel="stylesheet" type="text/css" href="{{ $secureCss.RelPermalink }}">
     {{ end }}
+
+    {{- partial "site-icons" . -}}
 
 	{{ if hugo.IsProduction }}
         {{- partial "gtm/head.html" . -}}
