@@ -9,4 +9,4 @@ export PATH="$theme_path/node_modules/.bin:$PATH"
 
 cd $project_dir
 
-hugo server -D $@
+"$script_dir/hugo.sh" server -D $@

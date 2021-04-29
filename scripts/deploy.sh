@@ -22,7 +22,7 @@ rm -f ../public/*.html
 rm -f ../public/*.xml
 
 # Build the project.
-hugo -e production --minify
+"$script_dir/hugo.sh" -e production --minify
 
 # Go To Public folder
 cd $public_dir
@@ -32,7 +32,8 @@ git add .
 
 # Commit changes.
 msg="rebuilding site $(date)"
-if [ -n "$*" ]; then
+if [ -n "$*" ]
+then
 	msg="$*"
 fi
 git commit -m "$msg"
