@@ -1,0 +1,18 @@
+baseURL = 'https://blog.emersonmx.dev/'
+languageCode = 'en-us'
+title = 'Emerson MX'
+theme = 'simple'
+
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = true
+style = 'monokai'
+tabWidth = 4
+
+[params]
+gtm = 'GTM-K2F66G4'
+subtitle = 'Developer Journal'

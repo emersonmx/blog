@@ -1,3 +1,6 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
 name = "Simple"
 license = "MIT"
 licenselink = "https://github.com/emersonmx/blog/blob/main/themes/simple/LICENSE"
@@ -8,5 +11,5 @@ features = []
 min_version = "0.41.0"
 
 [author]
-  name = "Emerson Max de Medeiros Silva"
-  homepage = "https://blog.emersonmx.dev"
+name = "Emerson Max de Medeiros Silva"
+homepage = "https://blog.emersonmx.dev"
