@@ -1,11 +1,18 @@
+user := $(shell id -u):$(shell id -g)
+cmd := docker-compose run --rm --user "${user}"
+
 .PHONY: build
 build:
-	docker-compose run --rm --user "$UID:$GID" hugo -e production --minify
+	${cmd} hugo -e production --minify
 
-.PHONY: run
-run:
-	docker-compose run --rm --user "$UID:$GID" --publish 1313:1313 hugo server -D
+.PHONY: server
+server:
+	${cmd} hugo server --buildDrafts
 
 .PHONY: shell
 shell:
-	docker-compose run --rm --user "$UID:$GID" hugo shell
+	${cmd} hugo shell
+
+.PHONY: clean
+clean:
+	rm -rf ./themes/simple/node_modules/
