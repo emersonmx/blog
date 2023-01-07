@@ -7,7 +7,7 @@ build:
 
 .PHONY: server
 server:
-	${cmd} hugo server --buildDrafts
+	${cmd} -p 1313:1313 hugo server --buildDrafts
 
 .PHONY: shell
 shell:
