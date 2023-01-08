@@ -1,0 +1,37 @@
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build and Deploy
+        run: |
+          git clone git@github.com:emersonmx/emersonmx.github.io.git public
+          ls -R public
+
+          pushd public ; git ls-files | xargs rm ; popd
+          ls -R public
+
+          make build
+          ls -R public
+
+          pushd public
+          git add .
+          git commit -m "Updated at $(date --iso-8601=minutes)"
+          #git push origin main
+          git log
+          popd
