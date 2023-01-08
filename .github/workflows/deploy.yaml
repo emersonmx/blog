@@ -1,9 +1,6 @@
 name: Deploy
 
 on:
-  push:
-    branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -26,13 +23,9 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          ls -R public
-
           pushd public ; git ls-files | xargs rm ; popd
-          ls -R public
 
           make build
-          ls -R public
 
           pushd public
           git config user.name github-actions
@@ -40,6 +33,5 @@ jobs:
 
           git add .
           git commit -m "Updated at $(date --iso-8601=minutes)"
-          #git push
-          git log
+          git push
           popd
