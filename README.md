@@ -1,6 +1,6 @@
 # blog
 
-My Blog code :)
+My Blog Code :)
 
 ## Running local
 
