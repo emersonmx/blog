@@ -6,7 +6,11 @@ module.exports = {
         path.resolve(themeDir, "layouts/**/*.html")
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                mono: ['"MesloLGS NF"', 'monospace'],
+            }
+        },
     },
     plugins: [],
 }

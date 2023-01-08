@@ -10,7 +10,7 @@ lineNoStart = 1
 lineNos = true
 lineNumbersInTable = true
 noClasses = true
-style = 'monokai'
+style = 'github'
 tabWidth = 4
 
 [params]
