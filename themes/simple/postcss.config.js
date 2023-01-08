@@ -1,8 +1,6 @@
 const path = require('path');
 const themeDir = path.resolve(__dirname);
 
-const tailwindConfig = path.resolve(themeDir, "tailwind.config.js");
-
 module.exports = {
     plugins: [
         require('postcss-import')({
@@ -11,7 +9,7 @@ module.exports = {
                 path.resolve(themeDir, 'assets/css'),
             ],
         }),
-        require('tailwindcss')(tailwindConfig),
+        require('tailwindcss')(path.resolve(themeDir, "tailwind.config.js")),
         require('autoprefixer'),
         ...(
             process.env.HUGO_ENVIRONMENT === 'production'
