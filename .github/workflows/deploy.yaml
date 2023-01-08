@@ -21,7 +21,7 @@ jobs:
       - name: Checkout destination
         uses: actions/checkout@v3
         with:
-          repository: 'emersonmx/emersonmx.github.io.git'
+          repository: 'emersonmx/emersonmx.github.io'
           path: public
 
       - name: Build and Deploy
