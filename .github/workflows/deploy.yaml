@@ -15,12 +15,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v3
+
+      - name: Checkout destination
+        uses: actions/checkout@v3
+        with:
+          repository: 'emersonmx/emersonmx.github.io.git'
+          path: public
 
       - name: Build and Deploy
         run: |
-          git clone git@github.com:emersonmx/emersonmx.github.io.git public
           ls -R public
 
           pushd public ; git ls-files | xargs rm ; popd
