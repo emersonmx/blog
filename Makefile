@@ -13,7 +13,7 @@ build: setup_theme
 
 .PHONY: server
 server: setup_theme
-	${cmd} -p 1313:1313 hugo server --buildDrafts
+	docker-compose up
 
 .PHONY: shell
 shell: setup_theme
