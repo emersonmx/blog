@@ -22,7 +22,9 @@ jobs:
 
       - name: Clean
         run: |
-          pushd public ; git ls-files | xargs rm ; popd
+          pushd public
+          git ls-files | xargs rm
+          popd
 
       - name: Build
         run: |
