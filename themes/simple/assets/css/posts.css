@@ -17,7 +17,7 @@ article > div {
     }
     > :not(div.highlight) {
         code {
-            @apply bg-slate-200 rounded-md px-2;
+            @apply bg-slate-200 rounded-md px-1;
         }
     }
 }
