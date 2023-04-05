@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Emerson MX'
 theme = 'simple'
 
+[markup.goldmark.extensions]
+typographer = false
+
 [markup.highlight]
 codeFences = true
 guessSyntax = false
