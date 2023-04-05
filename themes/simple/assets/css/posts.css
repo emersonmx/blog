@@ -1,4 +1,4 @@
-article > div {
+article {
     p {
         @apply mb-3;
     }
@@ -12,12 +12,23 @@ article > div {
     ol {
         @apply list-decimal;
     }
-    a {
-        @apply underline;
+
+    div.highlight {
+        @apply my-3;
     }
     > :not(div.highlight) {
         code {
             @apply bg-slate-200 rounded-md px-1;
         }
+    }
+}
+
+article > :nth-child(3) {
+    @apply mt-3;
+}
+
+article > :nth-child(n + 3) {
+    a {
+        @apply underline;
     }
 }
