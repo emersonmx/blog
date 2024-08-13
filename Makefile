@@ -1,4 +1,4 @@
-run_cmd := docker-compose run --rm
+run_cmd := docker compose run --rm
 theme_dir := $(shell realpath themes/simple)
 
 .PHONY: setup_theme
@@ -13,7 +13,7 @@ build: setup_theme
 
 .PHONY: server
 server: setup_theme
-	docker-compose up
+	docker compose up
 
 .PHONY: shell
 shell: setup_theme
