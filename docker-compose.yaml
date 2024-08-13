@@ -1,9 +1,8 @@
-version: "3"
-
 services:
   hugo:
     image: klakegg/hugo:ext-alpine
     command: ["server", "--buildDrafts"]
+    network_mode: host
     ports:
       - "1313:1313"
     volumes:
