@@ -1,14 +1,15 @@
 <head>
-    <meta charset="utf-8">
-	<title>
+    <meta charset="utf-8" />
+    <title>
         {{- block "title" . -}}
             {{- with .Params.Title -}}
                 {{ . }} |
-            {{- end }} {{ .Site.Title -}}
+            {{- end }}
+            {{ .Site.Title -}}
         {{- end -}}
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     {{ $css := resources.Get "css/style.css" | resources.PostCSS }}
     {{ with $css }}
@@ -17,12 +18,17 @@
             {{ $secureCss = $secureCss | resources.Minify | resources.PostProcess }}
         {{ end }}
 
-        <link rel="stylesheet" type="text/css" href="{{ $secureCss.RelPermalink }}">
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ $secureCss.RelPermalink }}"
+        />
     {{ end }}
 
     {{- partial "site-icons" . -}}
 
-	{{ if hugo.IsProduction }}
+    {{ if hugo.IsProduction }}
         {{- partial "gtm/head.html" . -}}
-	{{ end }}
+    {{ end }}
 </head>

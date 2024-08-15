@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     {{- partial "head.html" . -}}
+
 
     <body class="flex flex-col h-screen font-mono text-gray-900">
         {{ if hugo.IsProduction }}
@@ -8,6 +9,7 @@
         {{ end }}
 
         {{- partial "header.html" . -}}
+
 
         <main class="self-center w-full px-5 mb-auto max-w-screen-sm">
             {{- block "main" . }}{{- end }}

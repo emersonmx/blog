@@ -5,7 +5,10 @@
         </h1>
 
         {{ with .PublishDate }}
-            <time datetime="{{ .Format "2006-01-02T15:04:05Z0700" }}" class="text-xs text-gray-700">
+            <time
+                datetime="{{ .Format "2006-01-02T15:04:05Z0700" }}"
+                class="text-xs text-gray-700"
+            >
                 {{ .Format "2006-01-02 15:04:05" }}
             </time>
         {{ end }}
