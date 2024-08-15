@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require("path");
 const themeDir = path.resolve(__dirname);
 
 module.exports = {
-    content: [path.resolve(themeDir, 'layouts/**/*.html')],
+    content: [path.resolve(themeDir, "layouts/**/*.html")],
     theme: {
         fontFamily: {
-            mono: ['"MesloLGS NF"', 'monospace']
-        }
+            mono: ['"MesloLGS NF"', "monospace"],
+        },
     },
-    plugins: []
+    plugins: [],
 };
