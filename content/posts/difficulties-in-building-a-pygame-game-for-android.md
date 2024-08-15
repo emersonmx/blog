@@ -1,7 +1,6 @@
 ---
 title: "Difficulties in Building a Pygame Game for Android"
 date: 2024-08-15T17:03:25-03:00
-draft: true
 ---
 
 Recently, I was taking an [Android][1] course and got the urge to port a game I
