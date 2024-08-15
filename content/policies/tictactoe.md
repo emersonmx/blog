@@ -39,4 +39,3 @@ Email: emersonmx@gmail.com
 
 By using the TicTacToe app, you acknowledge that no data is being collected and
 agree to this Privacy Policy.
-
