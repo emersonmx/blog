@@ -2,7 +2,8 @@
     "trailingComma": "all",
     "semi": true,
     "singleQuote": false,
-    "plugins": ["prettier-plugin-go-template"],
+    "plugins": ["prettier-plugin-go-template", "prettier-plugin-tailwindcss"],
+    "tailwindConfig": "./tailwind.config.js",
     "overrides": [
         {
             "files": ["*.html"],
