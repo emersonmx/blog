@@ -27,8 +27,9 @@ jobs:
           popd
 
       - name: Build
+        uses: extractions/setup-just@v2
         run: |
-          make build
+          just build
 
       - name: Deploy
         run: |
