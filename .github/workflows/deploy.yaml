@@ -10,6 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: extractions/setup-just@v3
+
       - name: Checkout source
         uses: actions/checkout@v3
 
@@ -27,7 +29,6 @@ jobs:
           popd
 
       - name: Build
-        uses: extractions/setup-just@v2
         run: |
           just build
 
