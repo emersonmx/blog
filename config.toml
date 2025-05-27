@@ -10,10 +10,10 @@ typographer = false
 codeFences = true
 guessSyntax = false
 lineNoStart = 1
-lineNos = true
+lineNos = false
 lineNumbersInTable = true
 noClasses = true
-style = 'github'
+style = 'onedark'
 tabWidth = 4
 
 [params]

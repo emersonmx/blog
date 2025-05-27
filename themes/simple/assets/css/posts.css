@@ -33,10 +33,14 @@ article {
 
     div.highlight {
         @apply my-3;
+
+        pre {
+            @apply overflow-auto p-3;
+        }
     }
     > :not(div.highlight) {
         code {
-            @apply rounded-md bg-slate-200 px-1;
+            @apply text-wrap rounded-md bg-slate-200 px-1;
         }
     }
 }

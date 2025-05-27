@@ -93,7 +93,7 @@ tp new my-new-session
 ```
 
 Example Output:
-```
+```text
 Created new session configuration at: /home/user/.config/tp/my-new-session.yaml
 ```
 
@@ -115,7 +115,7 @@ tp list
 ```
 
 Example Output:
-```
+```text
 my-project-session
 another-session
 my-new-session
@@ -127,9 +127,9 @@ Integrate `tp` with your shell for autocompletion:
 
 ```bash
 tp completions zsh > _tp
-# Then source it in your zshrc, e.g., `source ~/.zsh_completions/_tp`
 ```
 
+Then source it in your zshrc, e.g., `source ~/.zsh_completions/_tp`.
 Replace `zsh` with your preferred shell.
 
 ## Behind the Scenes
