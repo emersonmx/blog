@@ -10,8 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: extractions/setup-just@v3
-
       - name: Checkout source
         uses: actions/checkout@v3
 
@@ -21,6 +19,10 @@ jobs:
           repository: 'emersonmx/emersonmx.github.io'
           path: public
           token: ${{ secrets.GH_PAT }}
+
+      - uses: extractions/setup-just@v3
+
+      - uses: peaceiris/actions-hugo@v2
 
       - name: Clean
         run: |
