@@ -1,0 +1,8 @@
+@import './fonts.css' layer(base);
+@import 'tailwindcss';
+@import './posts.css' layer(utilities);
+
+@theme {
+  --font-*: initial;
+  --font-mono: 'MesloLGS NF', monospace;
+}

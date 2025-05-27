@@ -11,13 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    {{ $css := resources.Get "css/style.css" | resources.PostCSS }}
+    {{ $css := resources.Get "css/style.css" }}
     {{ with $css }}
         {{ $secureCss := . | resources.Fingerprint }}
         {{ if hugo.IsProduction }}
             {{ $secureCss = $secureCss | resources.Minify | resources.PostProcess }}
         {{ end }}
-
 
         <link
             rel="stylesheet"
