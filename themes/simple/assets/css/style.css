@@ -350,6 +350,11 @@
     }
   }
 }
+@layer base {
+  html {
+    font-size: var(--text-xl);
+  }
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;

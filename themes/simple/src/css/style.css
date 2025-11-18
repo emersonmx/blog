@@ -6,3 +6,9 @@
   --font-*: initial;
   --font-mono: 'MesloLGS NF', monospace;
 }
+
+@layer base {
+  html {
+    font-size: var(--text-xl);
+  }
+}
