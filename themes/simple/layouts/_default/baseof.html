@@ -4,17 +4,16 @@
 
 
     <body class="flex h-screen flex-col font-mono text-gray-900">
-        {{ if hugo.IsProduction }}
-            {{- partial "gtm/body.html" . -}}
-        {{ end }}
-
         {{- partial "header.html" . -}}
-
 
         <main class="mb-auto w-full max-w-(--breakpoint-sm) self-center px-5">
             {{- block "main" . }}{{- end }}
         </main>
 
         {{- partial "footer.html" . -}}
+
+        {{ if hugo.IsProduction }}
+            {{- partial "cookie-consent-banner.html" . -}}
+        {{ end }}
     </body>
 </html>

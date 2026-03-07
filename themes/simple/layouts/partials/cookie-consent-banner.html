@@ -1,0 +1,49 @@
+<div id="cookie-consent-banner"
+     class="fixed bottom-0 left-0 w-full bg-gray-900 text-white px-4 py-4 items-center justify-center z-50 shadow hidden">
+    <span class="mr-5 text-sm">This website uses cookies to enhance your experience.</span>
+<button id="accept-cookies"
+        class="bg-white hover:bg-gray-100 text-gray-900 text-sm px-3 py-1 rounded border border-gray-300 transition">
+  Accept
+</button>
+</div>
+
+<script>
+    const COOKIE_NAME = 'cookie_consent';
+    const COOKIE_ACCEPTED_NAME = 'accepted';
+    const GTM_HEAD = `{{ partial "gtm/head.html" . }}`;
+    const GTM_BODY = `{{ partial "gtm/body.html" . }}`;
+
+    function checkConsent() {
+        return localStorage.getItem(COOKIE_NAME) === COOKIE_ACCEPTED_NAME;
+    }
+
+    function loadGTM() {
+        document.head.insertAdjacentHTML('beforeend', GTM_HEAD);
+        document.body.insertAdjacentHTML('afterbegin', GTM_BODY);
+    }
+
+    function showBanner() {
+        const banner = document.getElementById('cookie-consent-banner');
+        banner.classList.remove('hidden');
+        banner.classList.add('flex');
+    }
+
+    function hideBanner() {
+        const banner = document.getElementById('cookie-consent-banner');
+        banner.classList.remove('flex');
+        banner.classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (checkConsent()) {
+            loadGTM();
+        } else {
+            showBanner();
+            document.getElementById('accept-cookies').addEventListener('click', function() {
+                localStorage.setItem(COOKIE_NAME, COOKIE_ACCEPTED_NAME);
+                hideBanner();
+                loadGTM();
+            });
+        }
+    });
+</script>
