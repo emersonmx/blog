@@ -7,19 +7,32 @@
 </button>
 </div>
 
-<script>
+<template id="gtm-head-template">
+  {{ partial "gtm/head.html" . }}
+</template>
+
+<template id="gtm-body-template">
+  {{ partial "gtm/body.html" . }}
+</template>
+
+<script type="text/javascript">
     const COOKIE_NAME = 'cookie_consent';
     const COOKIE_ACCEPTED_NAME = 'accepted';
-    const GTM_HEAD = `{{ partial "gtm/head.html" . }}`;
-    const GTM_BODY = `{{ partial "gtm/body.html" . }}`;
 
     function checkConsent() {
         return localStorage.getItem(COOKIE_NAME) === COOKIE_ACCEPTED_NAME;
     }
 
     function loadGTM() {
-        document.head.insertAdjacentHTML('beforeend', GTM_HEAD);
-        document.body.insertAdjacentHTML('afterbegin', GTM_BODY);
+        const gtmHeadTemplate = document.getElementById('gtm-head-template');
+        if (gtmHeadTemplate) {
+            document.head.insertAdjacentHTML('beforeend', gtmHeadTemplate.innerHTML);
+        }
+
+        const gtmBodyTemplate = document.getElementById('gtm-body-template');
+        if (gtmBodyTemplate) {
+            document.body.insertAdjacentHTML('afterbegin', gtmBodyTemplate.innerHTML);
+        }
     }
 
     function showBanner() {
