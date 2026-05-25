@@ -4,46 +4,36 @@ date: 2026-05-25T11:59:20-03:00
 draft: true
 ---
 
-Pontos gerais sobre o desenvolvimento:
+Charlene is a modern HTTP/HTTPS request inspector with a TUI, created to help
+developers analyze traffic between clients and servers. This post is a general
+overview of the project and serves as an introduction to a series of future
+posts, where each technical aspect will be explored in detail.
 
-## O que é charlene?
+## What is Charlene?
 
-Um inspetor de requisições http para auxiliar devs que precisam analisar
-requisições e respostas entre cliente e servidor
+An open source HTTP/HTTPS proxy with a terminal user interface for real-time
+inspection of requests and responses. Inspired by tools like Charles, but free
+and cross-platform.
 
-## Porque criar um app para analisar requisições HTTP entre cliente e servidor
+## Why build Charlene?
 
-No mercado já existe o charles, porém como é um app pago resolvi implementar o
-meu.
+Although there are alternatives on the market, I wanted a free, simple, and
+easily extensible tool tailored to my workflow.
 
-## Porque usar Rust?
+## What will be covered in future posts?
 
-Porque sim :)
-Eu poderia usar Go, mas eu prefiro Rust para esse tipo de aplicação.
+In the upcoming posts, I will dive deeper into the main aspects of Charlene's
+development:
 
-## Porque usar tokio, hyper e ratatui?
+- **HTTP/HTTPS Proxy with Rust:** How I implemented the proxy using tokio and
+  hyper.
+- **HTTPS Traffic Interception:** Certificate generation and management.
+- **Proxy and TUI Communication:** Using async channels for real-time
+  integration.
+- **Elm-like Architecture:** Code organization and message flow.
+- **TUI with ratatui:** Building the interface and user experience.
+- **Challenges and Lessons Learned:** Problems faced and solutions found.
 
-Porque é o que eu tenho alguma experiência e eu não precisava aprender algo
-novo sem necessidade. Aí o meu único problema a resolver seria implementar o
-proxy.
+Each of these topics will be explored in detail in future posts.
 
-## Porque uma aplicação TUI?
-
-No início eu comecei sem qualquer TUI, era apenas um proxy que fazia log das
-requisições que iam chegando. Migrar para TUI foi apenas o próximo passo.
-Porém, eu ainda espero implementar uma versão GUI. Espero usar tauri + leptos
-para isso.
-
-## Porque usar a arquitetura Elm?
-
-A ideia de centralizar o processamento das mensagens no app acabou resolvendo
-alguns problemas por causa do uso de async/await e quem é o dono da verdade de
-alguns dados. Então no fim ficou algo mais simples do que eu tava fazendo
-quando não estava usando a arquitetura Elm.
-
-## Porque charlene?
-
-O nome vem do meme "não acredito não charlene". E como charlene é um nome
-próximo do nome charles. Logo, charlene.
-
-Respositório: https://github.com/emersonmx/charlene
+Stay tuned for the complete series on building Charlene!
