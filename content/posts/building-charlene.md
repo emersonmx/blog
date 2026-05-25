@@ -1,7 +1,6 @@
 ---
 title: "Building Charlene"
 date: 2026-05-25T11:59:20-03:00
-draft: true
 ---
 
 Charlene is a modern HTTP/HTTPS request inspector with a TUI, created to help
