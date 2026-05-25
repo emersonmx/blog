@@ -29,8 +29,8 @@ development:
 - **HTTPS Traffic Interception:** Certificate generation and management.
 - **Proxy and TUI Communication:** Using async channels for real-time
   integration.
-- **Elm-like Architecture:** Code organization and message flow.
-- **TUI with ratatui:** Building the interface and user experience.
+- **Elm Architecture in Ratatui:** Code organization and message flow.
+- **TUI with Ratatui:** Building the interface and user experience.
 - **Challenges and Lessons Learned:** Problems faced and solutions found.
 
 Each of these topics will be explored in detail in future posts.
