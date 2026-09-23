@@ -24,7 +24,7 @@ easily extensible tool tailored to my workflow.
 In the upcoming posts, I will dive deeper into the main aspects of Charlene's
 development:
 
-- **HTTP/HTTPS Proxy with Rust:** How I implemented the proxy using tokio and
+- **[HTTP Proxy with Rust][1]:** How I implemented the proxy using tokio and
   hyper.
 - **HTTPS Traffic Interception:** Certificate generation and management.
 - **Proxy and TUI Communication:** Using async channels for real-time
@@ -36,3 +36,5 @@ development:
 Each of these topics will be explored in detail in future posts.
 
 Stay tuned for the complete series on building Charlene!
+
+[1]: /posts/http-proxy-with-rust/
